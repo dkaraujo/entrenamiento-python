@@ -3,6 +3,8 @@ def dividir(a, b):
         resultado = a / b
     except ZeroDivisionError:
         print("No se puede dividir por cero")
+    except TypeError:
+        print("Solo se pueden dividir numeros")
     else:
         print("Todo bien:", resultado)
     finally:
@@ -11,3 +13,5 @@ def dividir(a, b):
 dividir(10, 2)
 print("---")
 dividir(10, 0)
+print("---")
+dividir("a", 2)
